@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 ARG AUUID="b731e587-449e-4f9f-a051-2028e5de7ff7"
-ARG CADDYIndexPage="https://github.com/AYJCSGM/mikutap/archive/master.zip"
+ARG CADDYIndexPage="https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-desktop-amd64.iso"
 ARG ParameterSSENCYPT="chacha20-ietf-poly1305"
 ARG PORT=80
 
