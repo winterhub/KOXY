@@ -10,53 +10,55 @@
 
 2. 在`Dockerfile`内第3-5行修改自定义设置，说明如下：
 
-`AUUID`：UUID，可在(https://www.uuidgenerator.net/) 生成
+    `AUUID`：UUID，可在 https://www.uuidgenerator.net/ 生成
 
-`CADDYIndexPage`：伪装站首页文件，如 www.baidu.com
+    `CADDYIndexPage`：伪装站首页文件，如 www.baidu.com
 
-`ParameterSSENCYPT`：ShadowSocks加密协议
+    `ParameterSSENCYPT`：ShadowSocks加密协议
 
-3. 去(https://hub.docker.com/)注册一个账号
+3. 去 https://hub.docker.com/ 注册一个账号,记下用户名和密码
 
 4. 编辑Actions文件`docker-image.yml`，
 
-按照“name: Docker_Hub_ID/自定义镜像名称”格式修改第13行
+    按照“name: Docker_Hub_ID/自定义镜像名称”格式修改第13行
 
 5. 添加Actions的Secrets变量，变量说明如下
 
-`DOCKER_USERNAME`：Docker_Hub_ID 用户名
+    `DOCKER_USERNAME`：Docker_Hub_ID 用户名
 
-`DOCKER_PASSWORD`：Docker_Hub 登录密码
+    `DOCKER_PASSWORD`：Docker_Hub 登录密码
 
-启动action
+6. 在github启动action
 
-6. 打开某容器云主页，新建一个应用
+7. 打开某容器云主页，新建一个应用
 
-7. 应用配置如下所示
+8. 应用配置如下所示
 
-`Docker Image`：Docker Hub镜像地址，
+    `Docker Image`：Docker Hub镜像地址，
 
-格式为“Docker_Hub_ID/自定义镜像名称”
+    格式为“Docker_Hub_ID/自定义镜像名称”
 
-Environment variables：
-`Name`：PORT，
+    Environment variables：
+    
+    `Name`：PORT，
 
-`Type`：plaintext
+    `Type`：plaintext
 
-`Value`：80
+    `Value`：80
 
-Exposing your service:
-Port：80
-Path：/
+    Exposing your service:
+    
+    `Port`：80
+    
+    `Path`：/
 
-`App_Name`：自己定义,
-
-如YYYY, ID为XXXX，则地址为YYYY-XXXX.koyeb.app
+    `App_Name`：自己定义, 如YYYY, ID为XXXX，则地址为YYYY-XXXX.koyeb.app
 
 
-8. 客户端配置如下所示
 
-V2ray
+### 9. 客户端配置如下所示
+
+    V2ray
 
 ```
 地址：YYYY-XXXX.koyeb.app
@@ -73,7 +75,7 @@ vless使用(/自定义UUID码-vless)，vmess使用(/自定义UUID码-vmess)
 跳过证书验证：false
 ```
 
-Trojan-go
+    Trojan-go
 
 ```bash
 {
@@ -93,7 +95,7 @@ Trojan-go
 }
 ```
 
-ShadowSocks
+    ShadowSocks
 
 ```bash
 服务器地址: YYYY-XXXX.koyeb.app
@@ -104,7 +106,7 @@ ShadowSocks
 说明：需将插件 https://github.com/shadowsocks/xray-plugin/releases 下载解压后放至shadowsocks同目录
 插件选项: tls;host=xxx.prod-glb.koyeb.app;path=/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-ss
 ```
-
+----------------------------------------
 ## 注意
 
 请勿滥用本仓库
