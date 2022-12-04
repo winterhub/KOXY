@@ -1,7 +1,7 @@
 # kb容器云部署Xy 
 
-###可用1 https://github.com/juhytfen/bbdcp
-###可用2 https://github.com/wgp-2020/KX
+### 可用1 https://github.com/juhytfen/bbdcp
+### 可用2 https://github.com/wgp-2020/KX
 
 
 ## 部署步骤
@@ -10,8 +10,10 @@
 
 2. 在`Dockerfile`内第3-5行修改自定义设置，说明如下：
 
-`AUUID`：UUID，可在(https://www.uuidgenerator.net/)生成
+`AUUID`：UUID，可在(https://www.uuidgenerator.net/) 生成
+
 `CADDYIndexPage`：伪装站首页文件，如 www.baidu.com
+
 `ParameterSSENCYPT`：ShadowSocks加密协议
 
 3. 去(https://hub.docker.com/)注册一个账号
