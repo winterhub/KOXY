@@ -1,6 +1,7 @@
 # kb容器云部署Xy 
 
-通过ws传输 
+###可用1 https://github.com/juhytfen/bbdcp ####
+###可用2 https://github.com/wgp-2020/KX ####
 
 ## 部署步骤
 
