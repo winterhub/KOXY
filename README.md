@@ -1,37 +1,44 @@
 # kb容器云部署Xy 
 
-###可用1 https://github.com/juhytfen/bbdcp ####
-###可用2 https://github.com/wgp-2020/KX ####
+###可用1 https://github.com/juhytfen/bbdcp
+###可用2 https://github.com/wgp-2020/KX
+
 
 ## 部署步骤
 
-1. fork本仓库
+1. fork某仓库
+
 2. 在`Dockerfile`内第3-5行修改自定义设置，说明如下：
 
-`AUUID`：用来部署节点的UUID，如有需要可在[uuidgenerator](https://www.uuidgenerator.net/)生成
-
-`CADDYIndexPage`：伪装站首页文件
-
+`AUUID`：UUID，可在(https://www.uuidgenerator.net/)生成
+`CADDYIndexPage`：伪装站首页文件，如 www.baidu.com
 `ParameterSSENCYPT`：ShadowSocks加密协议
 
-3. 去[Docker Hub](https://hub.docker.com/)注册一个账号，如有账号可跳过
+3. 去(https://hub.docker.com/)注册一个账号
+
 4. 编辑Actions文件`docker-image.yml`，按照“name: Docker Hub ID/自定义镜像名称”格式修改第13行
 5. 添加Actions的Secrets变量，变量说明如下
 
-`DOCKER_USERNAME`：Docker Hub ID
+`DOCKER_USERNAME`：Docker_Hub_ID
 
-`DOCKER_PASSWORD`：Docker Hub 登录密码
+`DOCKER_PASSWORD`：Docker_Hub 登录密码
 
 6. 打开某容器云主页，新建一个应用
 7. 应用配置如下所示
 
-`Docker Image`：Docker Hub镜像地址，格式为“docker.io/Docker Hub ID/自定义镜像名称”
+`Docker Image`：Docker Hub镜像地址，
+格式为“docker.io/Docker_Hub_ID/自定义镜像名称” 
+或 “Docker_Hub_ID/自定义镜像名称”
 
-`Container size`：部署配置，一般默认即可
+Environment variables：
+`Name`：PORT，
+`Type`：plaintext
+`Value`：80
 
-`Port`：80
+Exposing your service:
+Port：80
+Path：/
 
-Environment variables：`Key`：PORT，`Value`：80
 `Name`：自己定义
 
 8. 客户端配置如下所示
