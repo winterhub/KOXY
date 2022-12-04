@@ -18,37 +18,48 @@
 
 3. 去(https://hub.docker.com/)注册一个账号
 
-4. 编辑Actions文件`docker-image.yml`，按照“name: Docker Hub ID/自定义镜像名称”格式修改第13行
+4. 编辑Actions文件`docker-image.yml`，
+
+按照“name: Docker_Hub_ID/自定义镜像名称”格式修改第13行
+
 5. 添加Actions的Secrets变量，变量说明如下
 
-`DOCKER_USERNAME`：Docker_Hub_ID
+`DOCKER_USERNAME`：Docker_Hub_ID 用户名
 
 `DOCKER_PASSWORD`：Docker_Hub 登录密码
 
+启动action
+
 6. 打开某容器云主页，新建一个应用
+
 7. 应用配置如下所示
 
 `Docker Image`：Docker Hub镜像地址，
-格式为“docker.io/Docker_Hub_ID/自定义镜像名称” 
-或 “Docker_Hub_ID/自定义镜像名称”
+
+格式为“Docker_Hub_ID/自定义镜像名称”
 
 Environment variables：
 `Name`：PORT，
+
 `Type`：plaintext
+
 `Value`：80
 
 Exposing your service:
 Port：80
 Path：/
 
-`Name`：自己定义
+`App_Name`：自己定义,
+
+如YYYY, ID为XXXX，则地址为YYYY-XXXX.koyeb.app
+
 
 8. 客户端配置如下所示
 
 V2ray
 
 ```
-地址：xxx.prod-glb.koyeb.app
+地址：YYYY-XXXX.koyeb.app
 端口：443
 默认UUID：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
 vmess额外id：0
@@ -69,7 +80,7 @@ Trojan-go
     "run_type": "client",
     "local_addr": "127.0.0.1",
     "local_port": 1080,
-    "remote_addr": "xxx.prod-glb.koyeb.app",
+    "remote_addr": "YYYY-XXXX.koyeb.app",
     "remote_port": 443,
     "password": [
         "24b4b1e1-7a89-45f6-858c-242cf53b5bdb"
@@ -85,7 +96,7 @@ Trojan-go
 ShadowSocks
 
 ```bash
-服务器地址: xxx.koyeb.app
+服务器地址: YYYY-XXXX.koyeb.app
 端口: 443
 密码：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
 加密：chacha20-ietf-poly1305
