@@ -2,6 +2,7 @@
 
 ### 可用1 https://github.com/juhytfen/bbdcp
 ### 可用2 https://github.com/wgp-2020/KX
+### 可用3 https://github.com/fscarmen2/V2-for-Koyeb
 
 
 ## 部署步骤
